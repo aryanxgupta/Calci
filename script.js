@@ -115,8 +115,8 @@ function performCalc(val1,val2,op){
     }
     let len = String(result).length ;
     let decIdx = String(result).indexOf('.') ; 
-    if(decIdx != -1){
-        result = Number(result).toFixed(len-decIdx-1) ; 
+    if((len-decIdx-1)>9){
+        result = Number(result).toFixed(9) ; 
     }else{
         result = Number(result)
     }
